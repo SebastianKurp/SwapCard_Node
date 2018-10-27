@@ -1,0 +1,40 @@
+{
+  "name": "swapcardinterview",
+  "version": "1.0.0",
+  "description": "A challenge for SwapCard",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "start:ts": "ts-node src/index.ts",
+    "start:debug": "node --inspect=5858 -r ts-node/register src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(git://github.com/SebastianKurp/SwapCard_Node.git)"
+  },
+  "keywords": [
+    "npm",
+    "swapcard",
+    "node",
+    "apollo",
+    "graphql"
+  ],
+  "author": "Sebastian Kurpiel",
+  "license": "MIT",
+  "dependencies": {
+    "@types/dotenv": "^4.0.3",
+    "@types/graphql": "^14.0.3",
+    "@types/mongoose": "^5.2.20",
+    "apollo-server": "^2.1.0",
+    "dotenv": "^6.1.0",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.2",
+    "mongoose": "^5.3.7",
+    "nodemon": "^1.18.5",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.3"
+  }
+}
