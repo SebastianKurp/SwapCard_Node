@@ -1,6 +1,7 @@
 import { ApolloServer } from 'apollo-server';
 import { makeExecutableSchema } from 'graphql-tools';
 import mongoose from 'mongoose';
+import { MONGODB_URI } from './settings';
 
 /**
  * Connect to the mongodb database using the mongoose library.
@@ -8,8 +9,7 @@ import mongoose from 'mongoose';
 require('dotenv').config(); //To read the .env files
 
 mongoose.connect(
-  'mongodb://AdminTest:Test123@ds143683.mlab.com:43683/swapcard_node',
-  { useNewUrlParser: true }
+  MONGODB_URI,{ useNewUrlParser: true }
 );
 
 /**
@@ -53,4 +53,5 @@ const server = new ApolloServer({
  */
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
+  console.log(`MONGODB_URI ${MONGODB_URI}`);
 });
