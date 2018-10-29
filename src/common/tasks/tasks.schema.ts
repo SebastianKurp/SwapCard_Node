@@ -11,9 +11,13 @@ export const userTypeDefs = `
     timestamp: String!
   }
 
+  input TaskFilterInput {
+    limit: Int
+  }
+
   extend type Query {
-    users(filter: UserFilterInput): [User]
-    user(id: String!): User
+    tasks(filter: TaskFilterInput): [Task]
+    task(id: String!): task
   }
 
   input TaskInput {
