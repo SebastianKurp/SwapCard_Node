@@ -2,7 +2,7 @@ import Task from './tasks.model';
 
 //GraphQL type definitions.
 
-export const userTypeDefs = `
+export const taskTypeDefs = `
   # ! = required
   type Task {
     taskID: String! 
@@ -33,7 +33,7 @@ export const userTypeDefs = `
   }
 `;
 
-export const userResolvers = {
+export const TaskResolvers = {
   Query: {
     tasks: async (_, { filter = {} }) => {
       const tasks: any[] = await Task.find({}, null, filter);
@@ -54,8 +54,8 @@ export const userResolvers = {
       return task.toGraph();
     },
     deleteTask: async (_, { id }) => {
-      const user: any = await Task.findByIdAndRemove(id);
-      return user ? user.toGraph() : null;
+      const task: any = await Task.findByIdAndRemove(id);
+      return task ? task.toGraph() : null;
     },
   },
 };
