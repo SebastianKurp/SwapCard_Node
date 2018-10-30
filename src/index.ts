@@ -1,7 +1,9 @@
 import { ApolloServer } from 'apollo-server';
 import { makeExecutableSchema } from 'graphql-tools';
 import mongoose from 'mongoose';
+import { merge } from 'lodash';
 import { MONGODB_URI } from './settings';
+import { taskResolvers, taskTypeDefs } from './common/tasks/tasks.schema';
 
 //To read the .env files
 require('dotenv').config();
@@ -21,7 +23,8 @@ const rootTypeDefs = `
 `;
 
 const schema = makeExecutableSchema({
-  typeDefs: [rootTypeDefs],
+  typeDefs: [rootTypeDefs, taskTypeDefs],
+  resolvers: merge(taskResolvers),
 });
 
 //Create the server which we will send our GraphQL queries to.

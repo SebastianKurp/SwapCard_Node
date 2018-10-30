@@ -2,9 +2,9 @@
 import mongoose from 'mongoose';
 
 const taskSchema = new mongoose.Schema({
-  taskID: {//Unique ID
-   type: String,
-   required: true 
+  taskID: {
+    type: String,
+    required: true,
   },
   taskName: { // Name of the task
     type: String,
@@ -16,7 +16,7 @@ const taskSchema = new mongoose.Schema({
   },
   timestamp: { //time when the task was completed
     type: String,
-    required: true,
+    required: false, //Only required when completed
   },
 });
 

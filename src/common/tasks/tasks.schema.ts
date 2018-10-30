@@ -3,12 +3,12 @@ import Task from './tasks.model';
 //GraphQL type definitions.
 
 export const taskTypeDefs = `
-  # ! = required
-  type Task {
+
+  type Task { 
     taskID: String! 
     taskName: String!
-    completed: Boolean!
-    timestamp: String!
+    completed: Boolean
+    timestamp: String
   }
 
   input TaskFilterInput {
@@ -17,7 +17,7 @@ export const taskTypeDefs = `
 
   extend type Query {
     tasks(filter: TaskFilterInput): [Task]
-    task(id: String!): task
+    task(id: String!): Task
   }
 
   input TaskInput {
@@ -33,7 +33,7 @@ export const taskTypeDefs = `
   }
 `;
 
-export const TaskResolvers = {
+export const taskResolvers = {
   Query: {
     tasks: async (_, { filter = {} }) => {
       const tasks: any[] = await Task.find({}, null, filter);
@@ -49,7 +49,7 @@ export const TaskResolvers = {
       const task: any = await Task.create(input);
       return task.toGraph();
     },
-    checkTask: async (_, { id, input }) => {
+    editTask: async (_, { id, input }) => {
       const task: any = await Task.findByIdAndUpdate(id, input);
       return task.toGraph();
     },
