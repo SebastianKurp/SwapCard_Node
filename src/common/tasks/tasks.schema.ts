@@ -21,6 +21,7 @@ export const taskTypeDefs = `
   }
 
   input TaskInput {
+    taskID: String
     taskName: String
     completed: Boolean
     timestamp: String
