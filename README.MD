@@ -13,23 +13,22 @@
 
 Clone repo to your local machine
 
-`git clone https://github.com/SebastianKurp/SwapCard_Node.git                `
+```git clone https://github.com/SebastianKurp/SwapCard_Node.git```
 
 Get the .env file and place it in the root of the project
 
-`SwapCard_Node\                                                              `
+```SwapCard_Node\```
 
 Install the dependencies
-
-`npm install                                                                 `
+```npm install```
 
 Run the server in dev mode
 
-`npm run dev                                                                 `
+```npm run dev```
 
 To build for production, you will need to compile the project first since it's typescript
 
-`npm run compile && npm run start                                           `
+```npm run compile && npm run start ```                                          
 
 ## Complete List of Queries and Mutations to use with GraphQL Playground
 
@@ -85,9 +84,9 @@ mutation EditTask( ##Uncheck and check the task
   }
 }
 
-mutation DeleteTask ##Query Tasks
+mutation DeleteTask ##Deletes Task
 {
-  deleteTask(id: "5bd760e9e7179a1b53ff5504") {
+  deleteTask(id: "5bd760e9e7179a1b53ff5504") { ##enter id here
     taskName
   }
 }
