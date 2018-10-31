@@ -5,6 +5,7 @@ import {
   } from 'graphql-tools';
 import { graphql } from 'graphql';
 import { taskTypeDefs } from '../common/tasks/tasks.schema';
+import 'mocha';
 
 const queryTest = {
     id: 'Query Test',
