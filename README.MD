@@ -12,18 +12,23 @@
 ## Install and Build For Production
 
 Clone repo to your local machine
+
 `git clone https://github.com/SebastianKurp/SwapCard_Node.git`
 
 Get the .env file and place it in the root of the project
+
 `SwapCard_Node\`
 
 Install the dependencies
+
 `npm install`
 
 Run the server in dev mode
+
 `npm run dev`
 
 To build for production, you will need to compile the project first since it's typescript
+
 `npm run compile && npm run start`
 
 ## Complete List of Queries and Mutations to use with GraphQL Playground
