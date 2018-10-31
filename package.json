@@ -7,7 +7,7 @@
     "start": "node build/index.js",
     "start:ts": "ts-node src/index.ts",
     "start:debug": "node --inspect=5858 -r ts-node/register src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -r ts-node/register src/**/schema.test.ts",
     "dev": "nodemon",
     "tsc": "tsc"
   },
