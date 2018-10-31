@@ -1,5 +1,5 @@
 import { ApolloServer } from 'apollo-server';
-import { makeExecutableSchema } from 'graphql-tools';
+import {  makeExecutableSchema } from 'graphql-tools';
 import mongoose from 'mongoose';
 import { merge } from 'lodash';
 import { MONGODB_URI } from './settings';
@@ -8,7 +8,7 @@ import { taskResolvers, taskTypeDefs } from './common/tasks/tasks.schema';
 //To read the .env files
 require('dotenv').config();
 
-//connects to the mlab noSQLDB
+//connects to the mlab noSQL DB
 mongoose.connect(
   MONGODB_URI,{ useNewUrlParser: true }
 );
@@ -40,6 +40,6 @@ const server = new ApolloServer({
 });
 
 server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
+  console.log(`🚀 Server ready at ${url}`);
   console.log(`MONGODB_URI ${MONGODB_URI}`);
 });
