@@ -91,6 +91,16 @@ mutation DeleteTask ##Deletes Task
   }
 }
 ```
+## Query Variables
+
+```graphql
+{
+  "taskID": "1231231asdad123",
+  "taskname": "Check if Code Works",
+  "completed": true,
+  "timestamp": "10:12 AM CST 11-19-18"
+}
+```
 
 ## List of Tests
 
