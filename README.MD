@@ -5,7 +5,6 @@
 - apollo-server (For setting up the graphql server)
 - dotenv (For saving the mlab uri without hardcoding it)
 - graphql 
-- lodash(For merging the taskResolvers and removing that type error)
 - typescript (For type checking)
 - mlab (For providing/hosting a noSQL DB)
 
